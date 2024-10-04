@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/boecklin-coffee/static/css/main.c473051e.css",
-    "main.js": "/boecklin-coffee/static/js/main.3caf9b6a.js",
+    "main.js": "/boecklin-coffee/static/js/main.7ae98198.js",
     "static/js/453.6d96c21d.chunk.js": "/boecklin-coffee/static/js/453.6d96c21d.chunk.js",
     "index.html": "/boecklin-coffee/index.html",
     "main.c473051e.css.map": "/boecklin-coffee/static/css/main.c473051e.css.map",
-    "main.3caf9b6a.js.map": "/boecklin-coffee/static/js/main.3caf9b6a.js.map",
+    "main.7ae98198.js.map": "/boecklin-coffee/static/js/main.7ae98198.js.map",
     "453.6d96c21d.chunk.js.map": "/boecklin-coffee/static/js/453.6d96c21d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c473051e.css",
-    "static/js/main.3caf9b6a.js"
+    "static/js/main.7ae98198.js"
   ]
 }
