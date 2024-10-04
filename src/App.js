@@ -13,8 +13,9 @@ function App() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+
   useEffect(() => {
-    fetch("/products.json")
+    fetch(`${process.env.PUBLIC_URL}/products.json`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -30,6 +31,7 @@ function App() {
         setLoading(false);
       });
   }, []);
+
 
   if (error) {
     return <div className="error-message">Error: {error}</div>;
