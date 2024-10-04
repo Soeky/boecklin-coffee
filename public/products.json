@@ -1,0 +1,88 @@
+{
+  "coffee": [
+    {
+      "image": "images/cappuccino.jpeg",
+      "title": "Cappuccino",
+      "description": "Cremiger Cappuccino mit frischem Milchschaum."
+    },
+    {
+      "image": "images/cappuccino.jpeg",
+      "title": "Cappuccino",
+      "description": "Cremiger Cappuccino mit frischem Milchschaum."
+    },
+    {
+      "image": "images/cappuccino.jpeg",
+      "title": "Cappuccino",
+      "description": "Cremiger Cappuccino mit frischem Milchschaum."
+    },
+    {
+      "image": "images/cappuccino.jpeg",
+      "title": "Cappuccino",
+      "description": "Cremiger Cappuccino mit frischem Milchschaum."
+    },
+    {
+      "image": "images/cappuccino.jpeg",
+      "title": "Cappuccino",
+      "description": "Cremiger Cappuccino mit frischem Milchschaum."
+    },
+    {
+      "image": "images/espresso.jpeg",
+      "title": "Espresso",
+      "description": "Starker und aromatischer Espresso."
+    }
+  ],
+  "cake": [
+    {
+      "image": "images/chocolate-cake.jpeg",
+      "title": "Schokoladenkuchen",
+      "description": "Reichhaltiger Schokoladenkuchen mit Sahne."
+    },
+    {
+      "image": "images/cheesecake.jpeg",
+      "title": "Käsekuchen",
+      "description": "Frischer Käsekuchen mit Erdbeeren."
+    },
+    {
+      "image": "images/chocolate-cake.jpeg",
+      "title": "Schokoladenkuchen",
+      "description": "Reichhaltiger Schokoladenkuchen mit Sahne."
+    },
+    {
+      "image": "images/cheesecake.jpeg",
+      "title": "Käsekuchen",
+      "description": "Frischer Käsekuchen mit Erdbeeren."
+    },
+    {
+      "image": "images/chocolate-cake.jpeg",
+      "title": "Schokoladenkuchen",
+      "description": "Reichhaltiger Schokoladenkuchen mit Sahne."
+    },
+    {
+      "image": "images/cheesecake.jpeg",
+      "title": "Käsekuchen",
+      "description": "Frischer Käsekuchen mit Erdbeeren."
+    },
+    {
+      "image": "images/chocolate-cake.jpeg",
+      "title": "Schokoladenkuchen",
+      "description": "Reichhaltiger Schokoladenkuchen mit Sahne."
+    },
+    {
+      "image": "images/cheesecake.jpeg",
+      "title": "Käsekuchen",
+      "description": "Frischer Käsekuchen mit Erdbeeren."
+    }
+  ],
+  "sandwiches": [
+    {
+      "image": "images/club-sandwich.jpeg",
+      "title": "Club Sandwich",
+      "description": "Klassisches Club-Sandwich mit Hähnchen."
+    },
+    {
+      "image": "images/vegan-sandwich.jpeg",
+      "title": "Veganes Sandwich",
+      "description": "Leckeres veganes Sandwich mit frischen Zutaten."
+    }
+  ]
+}

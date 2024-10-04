@@ -1,0 +1,124 @@
+/* Container für die Sidebar */
+.sidebar-container {
+  display: flex;
+  width: 800px;
+  height: 100vh;
+  background-color: #f4f4f4;
+  position: relative;
+}
+
+.sidebar-left {
+  flex: auto;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.owner-story {
+  text-align: left;
+}
+
+/* Rechter Teil der Sidebar */
+.sidebar-right {
+  flex: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  font-size: 20px;
+  background-color: #555;
+  color: #fff;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.3s, opacity 0.3s ease-in-out;
+}
+
+.navigation ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation ul li {
+  margin-bottom: 10px;
+}
+
+.navigation ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Mobile Menü-Button */
+.menu-button {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #333;
+  color: white;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.navigation button {
+  background: none;
+  border: none;
+  color: #91623F;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Media Queries für mobile Geräte */
+@media (max-width: 768px) {
+  .sidebar-container {
+    flex-direction: column;
+    width: 100vw;
+    /* Volle Breite auf mobilen Geräten */
+    height: auto;
+  }
+
+  .sidebar-left {
+    display: flex;
+    /* Verstecke die linke Sidebar auf mobilen Geräten */
+  }
+
+  .sidebar-right {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    /* Passe die Breite an, damit sie nicht den gesamten Bildschirm verdeckt */
+    height: 100vh;
+    background-color: #555;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000;
+    transition: visibility 0.3s, opacity 0.3s ease-in-out;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-button {
+    display: block;
+    /* Menü-Button sichtbar auf mobilen Geräten */
+  }
+
+  /* Menü ist sichtbar, wenn es geöffnet ist */
+  .sidebar-container.open .sidebar-right {
+    visibility: visible;
+    opacity: 1;
+  }
+}

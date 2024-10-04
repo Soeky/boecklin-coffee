@@ -1,38 +1,177 @@
-.App {
-  text-align: center;
+/* App Container for Sidebar and Main Content */
+.app-container {
+  display: flex;
+  /* Flexbox to keep sidebar and main content side by side */
+  height: 100vh;
+  /* Full height of the viewport */
+  width: 100%;
+  /* Full width of the viewport */
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Sidebar Container for Story (Left) and Buttons (Right) */
+.sidebar-container {
+  display: flex;
+  /* Flex layout to align left and right sections side by side */
+  flex-direction: row;
+  /* Ensure story and buttons are side by side horizontally */
+  width: 620px;
+  /* Fixed width for the entire sidebar container */
+  height: 100vh;
+  /* Full height of the viewport */
+  background-color: #f4f4f4;
+  position: fixed;
+  /* Keep sidebar fixed */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  /* Include padding and border in width calculation */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Left Part of the Sidebar (Owner Story) */
+.sidebar-left {
+  flex: 2;
+  /* Zwei Drittel der Sidebar-Breite */
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-y: scroll;
+  /* Vertikales Scrollen ermöglichen */
+  font-size: 20px;
+  box-sizing: border-box;
+
+  /* Entfernen der Scrollleiste (Browser spezifisch) */
+}
+
+.sidebar-left::-webkit-scrollbar {
+  width: 0;
+  /* Scrollleiste ausblenden */
+}
+
+.sidebar-left {
+  -ms-overflow-style: none;
+  /* IE und Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Right Part of the Sidebar (Navigation Buttons) */
+.sidebar-right {
+  flex: 1;
+  /* Take one-third of the sidebar width */
+  padding: 20px;
+  max-width: 200px;
+  /* Limit the width of the buttons section */
+  background-color: #555;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* Align content to the top vertically */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* Center the content horizontally */
+  overflow: hidden;
+  /* Allow scrolling for navigation buttons, if necessary */
+  box-sizing: border-box;
+}
+
+/* Main Content Layout */
+.main-content {
+  flex-grow: 1;
+  /* Take up the remaining space in the app container */
+  margin-left: 620px;
+  /* Space to account for the fixed sidebar */
+  padding: 20px;
+  overflow-y: auto;
+  /* Allow vertical scrolling for the main content */
+  box-sizing: border-box;
+}
+
+/* Mobile Menu Button */
+.menu-button {
+  display: none;
+  /* Hidden by default (only for mobile use) */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #333;
   color: white;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .sidebar-container {
+    position: absolute;
+    /* Adjust to absolute to prevent overlap on mobile */
+    flex-direction: column;
+    /* Stack left and right parts vertically */
+    width: 100vw;
+    /* Full width on mobile */
+    height: auto;
+    /* Adjust height automatically based on content */
+  }
+
+  .sidebar-left,
+  .sidebar-right {
+    width: 100%;
+    /* Take full width in mobile view */
+  }
+
+  .sidebar-right {
+    position: fixed;
+    /* Fixed positioning for mobile sidebar toggle */
+    top: 0;
+    left: 0;
+    height: 100vh;
+    /* Full height for the sidebar */
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000;
+    transition: visibility 0.3s, opacity 0.3s ease-in-out;
+  }
+
+  .menu-button {
+    display: block;
+    /* Show menu button in mobile view */
+  }
+
+  /* When the sidebar is open */
+  .sidebar-container.open .sidebar-right {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .main-content {
+    margin-left: 0;
+    /* No left margin on mobile */
+    width: 100%;
+    /* Full width for main content */
+    padding: 10px;
+    /* Reduced padding for mobile */
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Section Styling */
+.section {
+  margin-bottom: 50px;
+}
+
+/* Body Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
 }

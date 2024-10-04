@@ -1,0 +1,78 @@
+/* Container für die Produktliste ohne Scrollleiste */
+.product-list-container {
+	display: flex;
+	overflow: hidden;
+	/* Keine sichtbare Scrollbar */
+	cursor: grab;
+	/* Mauszeiger zeigt Zieh-Hand an */
+	padding: 10px 0;
+	user-select: none;
+	/* Verhindert die Textauswahl beim Ziehen */
+	scroll-behavior: smooth;
+	/* Sanftes Scrollen */
+	transition: cursor 0.3s ease;
+	/* Weicher Übergang für den Cursor */
+}
+
+/* Zeigt den Zieh-Zustand an, wenn aktiv */
+.product-list-container.active {
+	cursor: grabbing;
+}
+
+/* Produktliste für horizontales Scrollen */
+.product-list {
+	display: flex;
+	flex-wrap: nowrap;
+	/* Kein Umbruch der Produktkarten */
+	gap: 20px;
+	/* Abstand zwischen den Produkten */
+	padding-left: 10px;
+	/* Leichtes Padding für Anfang der Liste */
+	padding-right: 10px;
+	/* Leichtes Padding für das Ende der Liste */
+}
+
+/* Styling der Produktkarten */
+.product-card {
+	min-width: 250px;
+	/* Mindestbreite der Produktkarten */
+	flex: 0 0 auto;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: #fff;
+	padding: 15px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	/* Übergang für Hover-Effekte */
+}
+
+/* Hover-Effekt für die Produktkarten */
+.product-card:hover {
+	transform: translateY(-5px);
+	/* Leichter "Schweben"-Effekt */
+	box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Bild in der Produktkarte */
+.product-image {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	object-fit: cover;
+	/* Damit das Bild immer gut aussieht, unabhängig von seiner Größe */
+}
+
+/* Titel des Produkts */
+.product-title {
+	font-size: 1.2em;
+	margin: 10px 0;
+	color: #333;
+	text-align: center;
+}
+
+/* Beschreibung des Produkts */
+.product-description {
+	font-size: 0.9em;
+	color: #555;
+	text-align: center;
+}
